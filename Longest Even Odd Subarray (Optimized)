@@ -1,0 +1,20 @@
+//Longest Even Odd Subarray
+public class Main
+{
+	public static void main(String[] args) {
+		int a[]={5,10,20,6,3,8};
+		int max=1;
+		int curr=1;
+		
+		for(int i=1;i<a.length;i++){
+		    if((a[i-1]%2==0&&a[i]%2!=0)||(a[i-1]%2!=0&&a[i]%2==0)){
+		    curr++;
+		    max=Math.max(max,curr);
+		    }
+		    else{
+		        curr=1;
+		    }
+		}
+		System.out.println(max);
+	}
+}
